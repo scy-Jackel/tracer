@@ -1,0 +1,4 @@
+pydicom==1.2.2
+scikit-image==0.17.2
+simpleitk==2.0.1
+lifelines==0.24.14

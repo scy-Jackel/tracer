@@ -1,0 +1,3 @@
+read weight: ./ckpt_cover/ckpt_845000.pkl
+read weight: ./ckpt_class/ckpt_845000.pkl
+img_num 3487

@@ -1,0 +1,6 @@
+#ckpt_class/*
+#ckpt_cover/*
+#cover_2d_out/*/*.jpg
+#optimizer_ckpt/*
+#!*/.gitignore
+
