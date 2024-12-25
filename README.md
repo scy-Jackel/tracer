@@ -1,22 +1,21 @@
-1. 测试环境：测试环境是三个项目共用的环境
+1. Test environment: The test environment is shared by the three projects
     python:3.6.5
-    cudatoolkit: 10（9应该也可以，测试的时候使用的版本是10）
+    cudatoolkit: 10 (9 should also work. The version used during testing is 10)
     ubuntu/windows
-    主要依赖及可行版本：
-    pytorch 1.2.0 (1.0.1以上应该也可以，测试的时候使用的版本是1.2.0)
+    Main dependencies and available versions:
+    pytorch 1.2.0 (1.0.1 and above should also work. The version used during testing is 1.2.0)
     pydicom 1.2.2
     simpleITK 1.2.4
     lifeline 0.24.12
     numpy 1.18.1
     opencv-python 4.2
 
-2. 测试数据
-    该项目的输入数据是detectorhit项目的部分结果输出，所以需要在运行此项目之前先运行detectorhit项目。
-
-3. 测试步骤
-3.1 手动修改配置文件
-    tracer/config_tracer.py: 需要手动修改detector_path，tracer_path分别为detectorhit项目的绝对路径和tracer项目的绝对路径。
-3.2 运行
-    运行tracer/main_local.py。（需要首先运行detecotrhit项目。）
-3.3 结果输出
-    输出结果在cover_2d_out中，对于每一个输入图片xx_orgin.jpg，都会有一个对应的xx_cover.jpg以及xx_overlay.jpg。xx_cover.jpg是预测的输入图片中导致该节点为恶性节点的像素点，xx_overlay.jpg为xx_cover与xx_origin的合并图像。
+2. Test Data
+    The input data of this project is part of the output of the detectorhit project, so you need to run the detectorhit project before running this project.
+3. Test steps
+3.1 Manually modify the configuration file
+    tracer/config_tracer.py: You need to manually modify detector_path and tracer_path to be the absolute paths of the detectorhit project and the tracer project respectively.
+3.2 Run
+    Run tracer/main_local.py. (You need to run the detecotrhit project first.)
+3.3 Result Output
+    The output result is in cover_2d_out. For each input image xx_origin.jpg, there will be a corresponding xx_cover.jpg and xx_overlay.jpg. xx_cover.jpg is the pixel point in the predicted input image that causes the node to be a malignant node, and xx_overlay.jpg is the merged image of xx_cover and xx_origin.
