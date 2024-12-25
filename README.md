@@ -1,3 +1,7 @@
+![image](recall.png)
+
+![image](FROC.png)
+
 1. Test environment: The test environment is shared by the three projects
     python:3.6.5
     cudatoolkit: 10 (9 should also work. The version used during testing is 10)
